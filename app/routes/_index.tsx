@@ -14,12 +14,15 @@ export const meta: MetaFunction = () => {
 };
 
 export async function loader({ context }: LoaderFunctionArgs) {
-  // @ts-ignore
   const db = drizzle(context.cloudflare.env.D1, {
     schema,
     // logger: services.env.ENVIRONMENT !== schema.asEnvironment('production'),
   });
-  const courses = await db.query.courses.findMany();
+  const courses = await db.query.courses.findMany({
+    with: {
+      lessons: true,
+    },
+  });
   return { courses };
 }
 
