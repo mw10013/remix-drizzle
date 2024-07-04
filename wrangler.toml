@@ -1,0 +1,20 @@
+name = "remix-drizzle"
+pages_build_output_dir = "build/client"
+compatibility_date = "2024-05-13"
+compatibility_flags = [ "nodejs_compat" ]
+
+[vars]
+ENVIRONMENT = "local"
+SERVICE_NAME = "remix-drizzle-app-local"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "kv-local"
+
+[[d1_databases]]
+binding = "D1"
+database_name = "d1-local"
+database_id = "d1-local"
+migrations_table = "d1_migrations"
+migrations_dir = "drizzle"
+
