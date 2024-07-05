@@ -1,7 +1,7 @@
 import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import { drizzle } from "drizzle-orm/d1";
-import * as schema from "~/schema";
+import * as schema from '@repo/shared/schema';
 
 export const meta: MetaFunction = () => {
   return [
