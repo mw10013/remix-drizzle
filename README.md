@@ -1,3 +1,10 @@
+# Remix-Drizzle
+
+- typescript: 5.5.3 vs 5.4.5
+
+- https://github.com/drizzle-team/drizzle-orm/issues/2418
+- https://turbo.build/repo/docs/core-concepts/internal-packages#just-in-time-packages
+
 # Welcome to Remix + Cloudflare!
 
 - 📖 [Remix docs](https://remix.run/docs)

@@ -2,6 +2,7 @@ import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import { drizzle } from "drizzle-orm/d1";
 import * as schema from '@repo/shared/schema';
+// import * as schema from "../schema-local";
 
 export const meta: MetaFunction = () => {
   return [
@@ -14,6 +15,7 @@ export const meta: MetaFunction = () => {
 };
 
 export async function loader({ context }: LoaderFunctionArgs) {
+  console.log(`environment: ${schema.asEnvironment('local')}`)
   const db = drizzle(context.cloudflare.env.D1, {
     schema,
     // logger: services.env.ENVIRONMENT !== schema.asEnvironment('production'),

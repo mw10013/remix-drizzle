@@ -1,5 +1,7 @@
 {
   "name": "@repo/shared",
+  "type": "module",
+  "sideEffects": false,
   "version": "0.0.0",
   "private": true,
   "exports": {
