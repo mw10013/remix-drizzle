@@ -5,6 +5,11 @@
 - pnpm env use -g 20.11.0
 - pnpm env list
 
+```
+(node:1325) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+```
+
 - typescript: 5.5.3 vs 5.4.5
 - drizzle-orm: 0.31.2 vs 0.30.10
 - drizzle-kit: 0.22.8 vs 0.21.4
