@@ -1,24 +1,26 @@
 {
   "name": "@repo/shared",
-  "type": "module",
-  "sideEffects": false,
   "version": "0.0.0",
   "private": true,
   "exports": {
     "./schema": "./src/schema.ts"
   },
   "scripts": {
+    "clean": "rm -rf node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "drizzle-orm": "*"
+  },
   "devDependencies": {
-    "@paralleldrive/cuid2": "^2.2.2"
+    "typescript": "*"
   },
   "peerDependencies": {
     "@paddle/paddle-node-sdk": "^1.4.1",
-    "drizzle-orm": "^0.30.10",
     "zod": "^3.23.8"
   }
 }
