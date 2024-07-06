@@ -1,10 +1,10 @@
 {
   "name": "app",
+  "type": "module",
   "private": true,
   "sideEffects": [
     "*.css"
   ],
-  "type": "module",
   "scripts": {
     "build": "remix vite:build",
     "deploy": "wrangler pages deploy ./build/client",
